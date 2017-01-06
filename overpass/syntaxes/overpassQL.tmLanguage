@@ -24,6 +24,20 @@
             <key>name</key>
             <string>entity.name.type.overpass</string>
         </dict>
+        <!--out types-->
+        <dict> 
+            <key>match</key>
+            <string>(meta|body|skel|tags|ids|count|qt|asc)</string>
+            <key>name</key>
+            <string>entity.name.tag.overpass</string>
+        </dict>
+        <!--constants-->
+        <dict>
+            <key>match</key>
+            <string>(\d+)</string>
+            <key>name</key>
+            <string>entity.name.type.overpass</string>
+        </dict>
         <dict>  
             <key>name</key>
             <string>string.quoted.double.overpass</string>
@@ -41,11 +55,12 @@
                 </dict>
             </array>
         </dict>
+        <!--comments-->
         <dict>
             <key>name</key>
             <string>comment.double-slash.overpass</string>
             <key>match</key>
-            <string>(^\/\/.+)</string>
+            <string>(\/\/.*)</string>
         </dict>
         <dict>
             <key>name</key>

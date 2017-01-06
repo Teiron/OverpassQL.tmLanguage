@@ -24,6 +24,13 @@
             <key>name</key>
             <string>entity.name.type.overpass</string>
         </dict>
+        <!--out types-->
+        <dict> 
+            <key>match</key>
+            <string>(meta|body|skel|tags|ids|count|qt|asc)</string>
+            <key>name</key>
+            <string>entity.name.tag.overpass</string>
+        </dict>
         <!--constants-->
         <dict>
             <key>match</key>
