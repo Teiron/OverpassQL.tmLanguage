@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Overpass QL</string>
+    <key>scopeName</key>
+    <string>source.overpass</string>
+    <key>fileTypes</key>
+    <array>
+        <string>overpass</string>
+    </array>
+    <key>patterns</key>
+    <array>
+        <dict>
+            <key>match</key>
+            <string>(out|json|xml|custom|popup|timeout|maxsize|bbox)</string>
+            <key>name</key>
+            <string>keyword.overpass</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>(relation|rel|way|node|is_in|area|around|user|uid|newer|changed|poly|pivot)</string>
+            <key>name</key>
+            <string>entity.name.type.overpass</string>
+        </dict>
+        <dict>  
+            <key>name</key>
+            <string>string.quoted.double.overpass</string>
+            <key>begin</key>
+            <string>"</string>
+            <key>end</key>
+            <string>"</string>
+            <key>patterns</key> 
+            <array>
+                <dict>
+                    <key>name</key>
+                    <string>constant.character.escape.overpass</string>
+                    <key>match</key>
+                    <string>\\.</string>
+                </dict>
+            </array>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>comment.double-slash.overpass</string>
+            <key>match</key>
+            <string>(^\/\/.+)</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>comment.block.overpass</string>
+            <key>begin</key>
+            <string>\/\*</string>
+            <key>end</key>
+            <string>\*\/</string>
+        </dict>
+    </array>
+</dict>
+</plist>
