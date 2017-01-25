@@ -19,17 +19,24 @@
             <key>name</key>
             <string>entity.name.type.overpass</string>
         </dict>
+        <!--recursion-->
+        <dict>
+            <key>match</key>
+            <string>(<|>)</string>
+            <key>name</key>
+            <string>keyword.operator.overpass</string>
+        </dict>
         <!--header-->
         <dict>
             <key>match</key>
-            <string>(out|json|xml|custom|popup|timeout|maxsize|bbox)</string>
+            <string>(out|json|xml|csv|custom|popup|timeout|maxsize|bbox)</string>
             <key>name</key>
             <string>keyword.overpass</string>
         </dict>
         <!--osm types-->
         <dict>
             <key>match</key>
-            <string>(relation|rel|way|node|is_in|area|around|user|uid|newer|changed|poly|pivot)</string>
+            <string>(relation|rel|way|node)</string>
             <key>name</key>
             <string>variable.parameter</string>
         </dict>
@@ -48,6 +55,13 @@
             <string>entity.name.type.overpass</string>
         </dict>
         <!--Constants-->
+        <!--booleans-->
+        <dict>
+            <key>name</key>
+            <string>constant.language.overpass</string>
+            <key>match</key>
+            <string>(true|false)</string>
+        </dict>
         <!--numeric-->
         <dict>
             <key>match</key>
