@@ -12,17 +12,33 @@
     </array>
     <key>patterns</key>
     <array>
+        <!--set names-->
+        <dict>
+            <key>match</key>
+            <string>(?<=\.)([\w|\d]+)</string>
+            <key>name</key>
+            <string>entity.name.type.overpass</string>
+        </dict>
+        <!--header-->
         <dict>
             <key>match</key>
             <string>(out|json|xml|custom|popup|timeout|maxsize|bbox)</string>
             <key>name</key>
             <string>keyword.overpass</string>
         </dict>
+        <!--osm types-->
         <dict>
             <key>match</key>
             <string>(relation|rel|way|node|is_in|area|around|user|uid|newer|changed|poly|pivot)</string>
             <key>name</key>
-            <string>entity.name.type.overpass</string>
+            <string>variable.parameter</string>
+        </dict>
+        <!--filters-->
+        <dict>
+            <key>match</key>
+            <string>(is_in|area|around|user|uid|newer|changed|poly|pivot)</string>
+            <key>name</key>
+            <string>entity.name.function.overpass</string>
         </dict>
         <!--out types-->
         <dict> 
@@ -31,13 +47,15 @@
             <key>name</key>
             <string>entity.name.type.overpass</string>
         </dict>
-        <!--constants-->
+        <!--Constants-->
+        <!--numeric-->
         <dict>
             <key>match</key>
             <string>(\d+)</string>
             <key>name</key>
-            <string>entity.name.numeric.overpass</string>
+            <string>entity.constant.numeric.overpass</string>
         </dict>
+        <!--strings-->
         <dict>  
             <key>name</key>
             <string>string.quoted.double.overpass</string>
@@ -55,13 +73,15 @@
                 </dict>
             </array>
         </dict>
-        <!--comments-->
+        <!--Comments-->
+        <!--inline comment-->
         <dict>
             <key>name</key>
             <string>comment.double-slash.overpass</string>
             <key>match</key>
             <string>(\/\/.*)</string>
         </dict>
+        <!--block comment-->
         <dict>
             <key>name</key>
             <string>comment.block.overpass</string>
