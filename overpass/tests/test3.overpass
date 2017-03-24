@@ -1,3 +1,14 @@
+[timeout:180]
+[maxsize:1073741824]
+[bbox:50.6,7.0,50.8,7.3]
+[out:json]
+[out:xml]
+[out:csv]
+[out:csv(::"id", amenity, name, operator, opening_hours, "contact:website", "contact:phone", brand, dispensing, lastcheck)]
+[date:"2012-09-12T06:55:00Z"]
+[diff:"2012-09-14T15:00:00Z"]
+[adiff:"2012-09-14T15:00:00Z"]
+
 (node[name="Foo"];)->.a;
 (node[name="Foo"]; way[name="Foo"];);
 (node[name="Foo"]; - node(50.0,7.0,51.0,8.0););
@@ -89,8 +100,7 @@ out;
 out 99;
 out body;
 out count;
-out ids;
-out meta;
+out ids; out meta;
 out skel;
 out tags;
 
