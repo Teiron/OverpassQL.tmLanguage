@@ -43,7 +43,7 @@
         <!--filters-->
         <dict>
             <key>match</key>
-            <string>(is_in|area|around|user|uid|newer|changed|poly|pivot)</string>
+            <string>(area|around|changed|convert|count_tags|count_members|date|foreach|id|if|is_date|is_in|is_number|is_tag|make|map_to_area|max|min|newer|number|pivot|poly|sum|uid|user|type)</string>
             <key>name</key>
             <string>entity.name.function.overpass</string>
         </dict>
