@@ -72,6 +72,23 @@
         <!--strings-->
         <dict>  
             <key>name</key>
+            <string>string.quoted.single.overpass</string>
+            <key>begin</key>
+            <string>'</string>
+            <key>end</key>
+            <string>'</string>
+            <key>patterns</key> 
+            <array>
+                <dict>
+                    <key>name</key>
+                    <string>constant.character.escape.overpass</string>
+                    <key>match</key>
+                    <string>\\.</string>
+                </dict>
+            </array>
+        </dict>
+        <dict>  
+            <key>name</key>
             <string>string.quoted.double.overpass</string>
             <key>begin</key>
             <string>"</string>
