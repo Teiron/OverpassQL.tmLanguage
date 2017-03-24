@@ -29,7 +29,7 @@
         <!--header-->
         <dict>
             <key>match</key>
-            <string>(json|xml|csv|custom|popup|timeout|maxsize|bbox)</string>
+            <string>(?<=\[)(popup|timeout|maxsize|bbox|out|date|diff|adiff)\s*</string>
             <key>name</key>
             <string>keyword.overpass</string>
         </dict>
