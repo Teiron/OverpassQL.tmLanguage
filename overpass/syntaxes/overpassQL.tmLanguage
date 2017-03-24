@@ -29,7 +29,7 @@
         <!--header-->
         <dict>
             <key>match</key>
-            <string>(out|json|xml|csv|custom|popup|timeout|maxsize|bbox)</string>
+            <string>(json|xml|csv|custom|popup|timeout|maxsize|bbox)</string>
             <key>name</key>
             <string>keyword.overpass</string>
         </dict>
@@ -47,12 +47,12 @@
             <key>name</key>
             <string>entity.name.function.overpass</string>
         </dict>
-        <!--out types-->
+        <!--out-->
         <dict> 
             <key>match</key>
-            <string>(meta|body|skel|tags|ids|count|qt|asc)</string>
+            <string>(?<!\[)out\s*(?:(?:body|count|ids|meta|skel|tags|geom|bb|center|qt|asc|(?:\d+)?)\s*)*</string>
             <key>name</key>
-            <string>entity.name.type.overpass</string>
+            <string>keyword.overpass</string>
         </dict>
         <!--Constants-->
         <!--booleans-->
