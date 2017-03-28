@@ -15,7 +15,7 @@
         <!--set names-->
         <dict>
             <key>match</key>
-            <string>(?<=\.)([\w|\d]+)</string>
+            <string>(?<=\.)([A-Za-z_][\w]*)</string> <!--keep in mind '.2nd_set'' is invalid-->
             <key>name</key>
             <string>entity.name.type.overpass</string>
         </dict>
