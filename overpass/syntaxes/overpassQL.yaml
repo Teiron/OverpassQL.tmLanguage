@@ -22,7 +22,7 @@ repository:
   set_names:
     patterns:
     - name: entity.name.type.overpass
-      match: (?<=\.)([A-Za-z_][\w]*)
+      match: (?<=\.)([A-Za-z_][\w]*)  # keep in mind '.2nd_set'' is invalid
 
   recursion_operators:
     patterns:
