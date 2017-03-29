@@ -1,0 +1,155 @@
+{
+  "name": "Overpass QL",
+  "scopeName": "source.overpass",
+  "fileTypes": [
+    "overpass"
+  ],
+  "patterns": [
+    {
+      "include": "#core"
+    }
+  ],
+  "repository": {
+    "core": {
+      "patterns": [
+        {
+          "include": "#set_names"
+        },
+        {
+          "include": "#recursion_operators"
+        },
+        {
+          "include": "#types"
+        },
+        {
+          "include": "#settings"
+        },
+        {
+          "include": "#filters"
+        },
+        {
+          "include": "#out"
+        },
+        {
+          "include": "#boolean"
+        },
+        {
+          "include": "#numeric"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#comments"
+        }
+      ]
+    },
+    "set_names": {
+      "patterns": [
+        {
+          "name": "entity.name.type.overpass",
+          "match": "(?<=\\.)([A-Za-z_][\\w]*)"
+        }
+      ]
+    },
+    "recursion_operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.overpass",
+          "match": "(<|>)"
+        }
+      ]
+    },
+    "settings": {
+      "patterns": [
+        {
+          "begin": "\\[",
+          "end": "\\]",
+          "patterns": [
+            {
+              "name": "keyword.overpass",
+              "match": "popup|timeout|maxsize|bbox|out|date|diff|adiff"
+            },
+            {
+              "include": "#numeric"
+            },
+            {
+              "include": "#strings"
+            }
+          ]
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "variable.parameter",
+          "match": "relation|rel|way|node"
+        }
+      ]
+    },
+    "filters": {
+      "patterns": [
+        {
+          "name": "entity.name.function.overpass",
+          "match": "(area|around|changed|convert|count_tags|count_members|date|foreach|id|if|is_date|is_in|is_number|is_tag|make|map_to_area|max|min|newer|number|pivot|poly|sum|uid|user|type)"
+        }
+      ]
+    },
+    "out": {
+      "patterns": [
+        {
+          "name": "keyword.overpass",
+          "match": "(?<!\\[)out\\s*(?:(?:body|count|ids|meta|skel|tags|geom|bb|center|qt|asc|(?:\\d+)?)\\s*)*"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.overpass",
+          "begin": "\\/\\*",
+          "end": "\\*\\/"
+        },
+        {
+          "name": "comment.line.double-slash.overpass",
+          "match": "\\/\\/.*"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.single.overpass",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.overpass",
+              "match": "\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.double.overpass",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.overpass",
+              "match": "\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numeric": {
+      "name": "constant.numeric.overpass",
+      "match": "\\d+"
+    },
+    "boolean": {
+      "name": "constant.boolean.overpass",
+      "match": "true|false"
+    }
+  }
+}
