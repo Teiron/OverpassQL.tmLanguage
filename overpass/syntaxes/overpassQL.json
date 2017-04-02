@@ -120,6 +120,16 @@
     "strings": {
       "patterns": [
         {
+          "include": "#single_string"
+        },
+        {
+          "include": "#double_string"
+        }
+      ]
+    },
+    "single_string": {
+      "patterns": [
+        {
           "name": "string.quoted.single.overpass",
           "begin": "'",
           "end": "'",
@@ -129,9 +139,13 @@
               "match": "\\."
             }
           ]
-        },
+        }
+      ]
+    },
+    "double_string": {
+      "patterns": [
         {
-          "name": "string.quoted.double.overpass",
+          "name": "string.quoted.single.overpass",
           "begin": "\"",
           "end": "\"",
           "patterns": [

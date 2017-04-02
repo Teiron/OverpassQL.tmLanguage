@@ -64,19 +64,27 @@ repository:
   
   strings:
     patterns:
+    - include: "#single_string"
+    - include: "#double_string"
+
+  single_string:
+    patterns:
     - name: string.quoted.single.overpass
       begin: "'"
       end: "'"
       patterns:
         - name: constant.character.escape.overpass
           match: \.
-    - name: string.quoted.double.overpass
+
+  double_string:
+    patterns:
+    - name: string.quoted.single.overpass
       begin: '"'
       end: '"'
       patterns:
-         - name: constant.character.escape.overpass
-           match: \.
-  
+        - name: constant.character.escape.overpass
+          match: \.
+
   numeric:
     name: constant.numeric.overpass
     match: \d+
