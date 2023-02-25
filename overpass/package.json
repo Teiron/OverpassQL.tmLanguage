@@ -14,7 +14,7 @@
         "languages": [{
             "id": "overpass",
             "aliases": ["Overpass QL", "overpass"],
-            "extensions": [".overpass"],
+            "extensions": [".overpass", ".overpassql"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
